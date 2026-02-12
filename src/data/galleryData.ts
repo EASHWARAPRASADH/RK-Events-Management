@@ -561,6 +561,24 @@ export const galleryItems: GalleryItem[] = [
         title: 'Mini Games Collection',
         description: 'Complete collection of mini games and activities'
     },
+    {
+        id: 86,
+        category: 'sports',
+        video: '/rk-photos/Gallery/Mini_Games/VID/minigames_111.mp4',
+        title: 'Interactive Game Video 1',
+        description: 'Engaging interactive game for events',
+        isVideo: true,
+        image: '/rk-photos/Gallery/Mini_Games/IMG/Mini games1.jpeg'
+    },
+    {
+        id: 87,
+        category: 'sports',
+        video: '/rk-photos/Gallery/Mini_Games/VID/minigames_123.mp4',
+        title: 'Interactive Game Video 2',
+        description: 'Fun interactive game activity',
+        isVideo: true,
+        image: '/rk-photos/Gallery/Mini_Games/IMG/Mini games2.jpeg'
+    },
 
     // Cultural Section - Multiple images
     {

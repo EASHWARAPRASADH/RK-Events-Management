@@ -37,7 +37,7 @@ const Gallery = () => {
     { id: 'corporate', name: 'Corporate' },
     { id: 'wedding', name: 'Weddings' },
     { id: 'birthday', name: 'Birthdays' },
-    { id: 'sports', name: 'Mini Games' },
+    { id: 'sports', name: 'Interactive Games' },
     { id: 'cultural', name: 'Cultural' },
     { id: 'decorations', name: 'Decorations' }
   ];
