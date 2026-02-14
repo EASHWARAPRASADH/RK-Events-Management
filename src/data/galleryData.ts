@@ -579,6 +579,15 @@ export const galleryItems: GalleryItem[] = [
         isVideo: true,
         image: '/rk-photos/Gallery/Mini_Games/IMG/Mini games2.jpeg'
     },
+    {
+        id: 88,
+        category: 'sports',
+        video: '/rk-photos/Gallery/Mini_Games/VID/minigamesvideo4.mp4',
+        title: 'Interactive Game Video 3',
+        description: 'Exciting interactive game moment',
+        isVideo: true,
+        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames3.jpeg'
+    },
 
     // Cultural Section - Multiple images
     {
