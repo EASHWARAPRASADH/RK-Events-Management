@@ -28,7 +28,7 @@ const StatsSection = () => {
     },
     {
       icon: Trophy,
-      number: 15,
+      number: 16,
       label: 'Years Experience',
       description: 'In event management industry',
       key: 'years'
@@ -83,7 +83,7 @@ const StatsSection = () => {
             // Start animations with slight delays for staggered effect
             setTimeout(() => animateCount(3000, 2500), 100);
             setTimeout(() => animateCount(50000, 3000), 200);
-            setTimeout(() => animateCount(15, 1500), 300);
+            setTimeout(() => animateCount(16, 1500), 300);
             setTimeout(() => animateCount(500, 2000), 400);
           }
         });

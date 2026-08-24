@@ -35,7 +35,7 @@ const About = () => {
     { year: '2015', event: 'Expanded services to include corporate events' },
     { year: '2018', event: 'Celebrated 1000+ events and introduced 360° booth' },
     { year: '2021', event: 'Adapted to virtual and hybrid event formats' },
-    { year: '2024', event: 'Celebrating 15+ years with 3000+ successful events' }
+    { year: '2025', event: 'Celebrating 16+ years with 3000+ successful events' }
   ];
 
   return (
@@ -48,7 +48,7 @@ const About = () => {
               About <span className="text-gold-400">RK Events</span>
             </h1>
             <p className="text-xl md:text-2xl text-maroon-100 max-w-4xl mx-auto leading-relaxed">
-              Creating Memorable Occasions for Over 15 Years in Chennai
+              Creating Memorable Occasions for Over 16 Years in Chennai
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ const About = () => {
                   Founded in 2009, RK Events and Management™ began with a simple vision: to transform ordinary moments into extraordinary celebrations. What started as a small event planning service in Chennai has grown into one of the city's most trusted event management companies.
                 </p>
                 <p>
-                  Over the past 15 years, we have had the privilege of organizing over 3,000 events, creating magical experiences for more than 50,000 guests. From intimate family gatherings to grand corporate celebrations, we've consistently delivered excellence.
+                  Over the past 16 years, we have had the privilege of organizing over 3,000 events, creating magical experiences for more than 50,000 guests. From intimate family gatherings to grand corporate celebrations, we've consistently delivered excellence.
                 </p>
                 <p>
                   Our success is built on understanding that every event is unique, and every celebration deserves meticulous attention to detail. We don't just plan events; we craft experiences that leave lasting impressions.
@@ -76,14 +76,14 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="/svg/logo1logo-removebg-preview-DqMLdMPO.png"
+                src="/svg/logo.png"
                 alt="RK Events Logo"
                 className="rounded-2xl shadow-2xl bg-white p-8"
                 style={{ width: '500px', height: '400px', objectFit: 'contain' }}
               />
               <div className="absolute -bottom-8 -right-8 bg-gold-500 text-maroon-900 p-6 rounded-xl shadow-xl">
                 <div className="text-center">
-                  <div className="text-3xl font-bold">15+</div>
+                  <div className="text-3xl font-bold">16+</div>
                   <div className="text-sm font-medium">Years Experience</div>
                 </div>
               </div>

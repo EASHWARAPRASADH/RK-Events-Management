@@ -7,9 +7,22 @@ export interface GalleryItem {
     title: string;
     description: string;
     isVideo?: boolean;
+    images?: string[];
+    videos?: string[];
+    isGrouped?: boolean;
 }
 
 export const galleryItems: GalleryItem[] = [
+    {
+        id: 86,
+        category: 'sports',
+        title: 'Interactive Games Highlights',
+        description: 'Watch our exciting interactive games in action! From high-tech challenges to classic fun.',
+        video: '/rk-photos/Gallery/Mini_Games/VID/minigames_111.mp4',
+        isVideo: true,
+        image: '/rk-photos/Gallery/Mini_Games/IMG/10.jpeg',
+        isGrouped: false
+    },
     // Corporate Section - All available images and videos
     {
         id: 1,
@@ -434,211 +447,316 @@ export const galleryItems: GalleryItem[] = [
         description: 'Fun-filled kids playground setup with games and entertainment zones'
     },
 
-    // Mini Games Section - Multiple images
+    // Interactive Games Section - Grouped by Game Type
     {
         id: 39,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Mini games1.jpeg',
-        title: 'Mini Games',
-        description: 'Exciting mini games and activities for all ages'
+        title: 'Kids Bouncy Castle / Inflatable Slide',
+        description: 'Safe and fun inflatable bouncy castles and slides for children.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/1.jpeg',
+        images: [
+            '/rk-photos/Gallery/Mini_Games/IMG/1.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/3.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/4.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/Minigames7.jpeg'
+        ],
+        videos: [],
+        isGrouped: true
     },
     {
         id: 40,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Mini games2.jpeg',
-        title: 'Interactive Games',
-        description: 'Interactive gaming activities for parties and events'
+        title: 'Crazy Chicken Shooting Game',
+        description: 'Test your aim with this fun and interactive chicken shooting game.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/10.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/10.jpeg'],
+        videos: ['/rk-photos/Gallery/Mini_Games/VID/minigames_111.mp4'],
+        isGrouped: true
     },
     {
         id: 41,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigame8.jpeg',
-        title: 'Game Station Setup',
-        description: 'Professional game station setup for entertainment'
+        title: 'Giant Chess Game',
+        description: 'A life-sized version of the classic strategy game for grand-scale fun.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames9.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/Minigames9.jpeg'],
+        videos: [],
+        isGrouped: true
     },
     {
         id: 42,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames3.jpeg',
-        title: 'Group Gaming Activities',
-        description: 'Fun group gaming activities for team building'
+        title: 'Whack-A-Frog Game',
+        description: 'Fast-paced fun as you try to whack the frogs as they appear.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/12.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/12.jpeg'],
+        videos: ['/rk-photos/Gallery/Mini_Games/VID/Minigamesvideo3.mp4'],
+        isGrouped: true
     },
     {
         id: 43,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames4.jpeg',
-        title: 'Party Game Zone',
-        description: 'Dedicated party game zones with various activities'
+        title: 'Grab The Stick Reaction Game',
+        description: 'Test your reflexes by catching the sticks as they drop.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/13.jpeg',
+        images: [
+            '/rk-photos/Gallery/Mini_Games/IMG/13.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/11.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/Minigames6.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/minigames86.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/Minigames11.jpeg'
+        ],
+        videos: [
+            '/rk-photos/Gallery/Mini_Games/VID/Minigamesvideo.mp4',
+            '/rk-photos/Gallery/Mini_Games/VID/Minigamesvideo2.mp4',
+            '/rk-photos/Gallery/Mini_Games/VID/minigame_video4.mp4'
+        ],
+        isGrouped: true
     },
     {
         id: 44,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames5.jpeg',
-        title: 'Entertainment Setup',
-        description: 'Complete entertainment setup with mini games'
+        title: 'Giant Tic Tac Toe',
+        description: 'The classic game of strategy played on a giant scale.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/14.jpeg',
+        images: [
+            '/rk-photos/Gallery/Mini_Games/IMG/14.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/Minigames16.jpeg'
+        ],
+        videos: [],
+        isGrouped: true
     },
     {
         id: 45,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames6.jpeg',
-        title: 'Kids Game Corner',
-        description: 'Special kids game corner with age-appropriate activities'
+        title: 'Giant Snake and Ladder',
+        description: 'Climb ladders and slide down snakes in this giant floor game.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/16.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/16.jpeg'],
+        videos: [],
+        isGrouped: true
     },
     {
         id: 46,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames7.jpeg',
-        title: 'Active Gaming',
-        description: 'Active gaming sessions for physical and mental engagement'
+        title: 'Giant Twister Game',
+        description: 'Get tangled up in fun with this larger-than-life Twister game.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/17.jpeg',
+        images: [
+            '/rk-photos/Gallery/Mini_Games/IMG/17.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/Minigames8.jpeg'
+        ],
+        videos: [],
+        isGrouped: true
     },
     {
         id: 47,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames8.jpeg',
-        title: 'Game Competition',
-        description: 'Competitive gaming activities and tournaments'
+        title: 'Buzz Wire Challenge',
+        description: 'Steady hands are a must to navigate the wire without making it buzz.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/22.jpeg',
+        images: [
+            '/rk-photos/Gallery/Mini_Games/IMG/22.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/minigame%2067.jpeg'
+        ],
+        videos: ['/rk-photos/Gallery/Mini_Games/VID/Minigamesvideo3.mp4'],
+        isGrouped: true
     },
     {
         id: 48,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames9.jpeg',
-        title: 'Fun Activities',
-        description: 'Various fun activities and mini games for entertainment'
+        title: 'Archery Challenge',
+        description: 'Channel your inner archer and aim for the bullseye.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/28.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/28.jpeg'],
+        videos: [],
+        isGrouped: true
     },
     {
         id: 49,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames10.jpeg',
-        title: 'Game Challenges',
-        description: 'Challenging mini games for skill development'
+        title: 'Mini Golf Putting',
+        description: 'Perfect your putting skills on our miniature golf course.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/30.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/30.jpeg'],
+        videos: ['/rk-photos/Gallery/Mini_Games/VID/minigames_123.mp4'],
+        isGrouped: true
     },
     {
         id: 50,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames11.jpeg',
-        title: 'Team Games',
-        description: 'Team-based mini games for group participation'
+        title: 'Can Knockdown Game',
+        description: 'How many cans can you knock down in one throw?',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/27.jpeg',
+        images: [
+            '/rk-photos/Gallery/Mini_Games/IMG/27.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/mini%20games.jpeg'
+        ],
+        videos: [],
+        isGrouped: true
     },
     {
         id: 51,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigame12.jpeg',
-        title: 'Creative Games',
-        description: 'Creative and educational mini games'
+        title: 'Cone Ring Toss Game',
+        description: 'A fun variation of ring toss using colorful cones.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/29.jpeg',
+        images: [
+            '/rk-photos/Gallery/Mini_Games/IMG/29.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/Mini%20games2.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/Minigame14.jpeg'
+        ],
+        videos: [],
+        isGrouped: true
     },
     {
         id: 52,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigame13.jpeg',
-        title: 'Adventure Games',
-        description: 'Adventure-themed mini games and activities'
+        title: 'Zorb Roller Game',
+        description: 'Roll and race in giant inflatable Zorb barrels.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/21.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/21.jpeg'],
+        videos: [],
+        isGrouped: true
     },
     {
         id: 53,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigame14.jpeg',
-        title: 'Skill Games',
-        description: 'Skill-based mini games for all skill levels'
+        title: 'Mascot Character Entertainment',
+        description: 'Professional mascot characters to bring joy to any event.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/18.jpeg',
+        images: [
+            '/rk-photos/Gallery/Mini_Games/IMG/18.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/19.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/20.jpeg'
+        ],
+        videos: [],
+        isGrouped: true
     },
     {
         id: 54,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames15.jpeg',
-        title: 'Party Entertainment',
-        description: 'Complete party entertainment with mini games'
+        title: 'Gyro Putter Game',
+        description: 'Test your precision and balance with the dynamic Gyro Putter challenge.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigame12.jpeg',
+        images: [
+            '/rk-photos/Gallery/Mini_Games/IMG/Minigame12.jpeg',
+            '/rk-photos/Gallery/Mini_Games/IMG/Minigames5.jpeg'
+        ],
+        videos: ['/rk-photos/Gallery/Mini_Games/VID/minigames_123.mp4'],
+        isGrouped: true
     },
     {
         id: 55,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames16.jpeg',
-        title: 'Game Festival',
-        description: 'Mini game festival setup for large events'
+        title: 'Bicycle Game',
+        description: 'Pedal your way to victory in this exciting bicycle-themed interactive challenge.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/Mini games1.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/Mini games1.jpeg'],
+        videos: [],
+        isGrouped: true
     },
     {
         id: 56,
         category: 'sports',
-        image: '/rk-photos/Gallery/Mini_Games/IMG/mini games.jpeg',
-        title: 'Mini Games Collection',
-        description: 'Complete collection of mini games and activities'
+        title: 'Pottery Game',
+        description: 'Explore your creativity with our traditional pottery making activity.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/minigame_pottery.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/minigame_pottery.jpeg'],
+        videos: [],
+        isGrouped: true
     },
     {
-        id: 86,
+        id: 57,
         category: 'sports',
-        video: '/rk-photos/Gallery/Mini_Games/VID/minigames_111.mp4',
-        title: 'Interactive Game Video 1',
-        description: 'Engaging interactive game for events',
-        isVideo: true,
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Mini games1.jpeg'
+        title: 'Square Game',
+        description: 'A fun and engaging tile-based puzzle game.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames15.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/Minigames15.jpeg'],
+        videos: [],
+        isGrouped: true
     },
     {
-        id: 87,
+        id: 58,
         category: 'sports',
-        video: '/rk-photos/Gallery/Mini_Games/VID/minigames_123.mp4',
-        title: 'Interactive Game Video 2',
-        description: 'Fun interactive game activity',
-        isVideo: true,
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Mini games2.jpeg'
+        title: 'Giant Ludo Game',
+        description: 'Enjoy the classic board game Ludo on a massive scale with life-sized pieces.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames10.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/Minigames10.jpeg'],
+        videos: [],
+        isGrouped: true
     },
     {
-        id: 88,
+        id: 59,
         category: 'sports',
-        video: '/rk-photos/Gallery/Mini_Games/VID/minigamesvideo4.mp4',
-        title: 'Interactive Game Video 3',
-        description: 'Exciting interactive game moment',
-        isVideo: true,
-        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames3.jpeg'
+        title: 'Mechanical Bull Ride',
+        description: 'Take on the challenge and see how long you can stay on our professional mechanical bull.',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigame13.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/Minigame13.jpeg'],
+        videos: [],
+        isGrouped: true
+    },
+    {
+        id: 60,
+        category: 'sports',
+        title: 'High Striker (Hammer Strength Game)',
+        description: 'Test your strength with our classic high striker challenge. Hit the base with the hammer and see if you can ring the bell!',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/Minigames_56.jpeg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/Minigames_56.jpeg'],
+        videos: [],
+        isGrouped: true
     },
 
     // Cultural Section - Multiple images
     {
         id: 57,
-        category: 'cultural',
+        category: 'wedding',
         image: '/rk-photos/Gallery/Culturals/IMG/Anniversary.jpg',
-        title: 'Culturals',
-        description: 'School annual day celebration 1'
+        title: 'Wedding Anniversary stage decoration',
+        description: 'Elegant stage setup for wedding anniversary celebration'
     },
     {
         id: 58,
         category: 'cultural',
         image: '/rk-photos/Gallery/Culturals/IMG/SchoolAnual Day.jpeg',
-        title: 'Annual Day 2',
-        description: 'School annual day celebration 2'
+        title: 'College Culturals and School Annual Day Stage',
+        description: 'Grand stage lighting and setup for College Culturals and School Annual Day celebration'
     },
     {
         id: 59,
         category: 'cultural',
         image: '/rk-photos/Gallery/Culturals/IMG/SchoolAnualday1.jpeg',
-        title: 'Annual Day 3',
-        description: 'School annual day celebration 3'
+        title: 'Student Cultural Performance',
+        description: 'Vibrant cultural dance performance by students on stage'
     },
     {
         id: 60,
         category: 'cultural',
         image: '/rk-photos/Gallery/Culturals/IMG/Schoolannualday5.jpeg',
-        title: 'Annual Day 4',
-        description: 'School annual day celebration 4'
+        title: 'College Culturals and School Annual Day Celebrations',
+        description: 'Students group performance during College Culturals and School Annual Day events'
     },
     {
         id: 61,
         category: 'cultural',
         image: '/rk-photos/Gallery/Culturals/IMG/SchoolAnnualday4.jpeg',
-        title: 'Annual Day 5',
-        description: 'School annual day celebration 5'
+        title: 'Culturals Dance Choreography',
+        description: 'Traditional and fusion dance choreography performance'
     },
 
     {
         id: 63,
         category: 'cultural',
         image: '/rk-photos/Gallery/Culturals/IMG/SchoolAnnualday2.jpeg',
-        title: 'Annual Day 7',
-        description: 'School annual day celebration 7'
+        title: 'School Festive Drama',
+        description: 'Students theatrical play and drama performance on stage'
     },
     {
         id: 64,
         category: 'cultural',
         image: '/rk-photos/Gallery/Culturals/IMG/SchoolAnnualday.jpeg',
-        title: 'Annual Day 8',
-        description: 'School annual day celebration 8'
+        title: 'Stage Presentation Ceremony',
+        description: 'Award presentation ceremony and stage event for College Culturals and School Annual Day'
     },
     {
         id: 65,
@@ -788,5 +906,115 @@ export const galleryItems: GalleryItem[] = [
         image: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_7.jpg',
         title: 'Corporate Lighting Setup 2',
         description: 'Sophisticated ambient lighting for professional corporate gatherings'
+    },
+    // VR, Motion & 360° Photo Booth Section
+    {
+        id: 201,
+        category: 'vr-motion-360',
+        image: '/rk-photos/Gallery/VR_Games/vr.jpeg',
+        title: 'Immersive VR Arena',
+        description: 'Immersive virtual reality gaming experience with Meta Quest headsets.',
+        images: [
+            '/rk-photos/Gallery/VR_Games/vr.jpeg',
+            '/rk-photos/Gallery/VR_Games/vr1.jpeg',
+            '/rk-photos/Gallery/VR_Games/vr2.jpeg',
+            '/rk-photos/Gallery/VR_Games/vr3.jpeg',
+            '/rk-photos/Gallery/VR_Games/vr4.jpeg'
+        ],
+        isGrouped: true
+    },
+    {
+        id: 202,
+        category: 'vr-motion-360',
+        image: '/rk-photos/Gallery/VR_Games/vr1.jpeg',
+        title: 'Virtual Sports Simulator',
+        description: 'Interactive VR sports simulator setup for corporate gala fests.'
+    },
+    {
+        id: 211,
+        category: 'vr-motion-360',
+        image: '/img/interactive.jpg',
+        title: 'Switch Motion Play',
+        description: 'Active multiplayer dancing and sports motion gaming challenge.'
+    },
+    {
+        id: 212,
+        category: 'vr-motion-360',
+        image: '/img/interactive.jpg',
+        title: 'Interactive Xbox Dance',
+        description: 'Xbox Kinect dance-off competition zone setup.'
+    },
+    {
+        id: 221,
+        category: 'vr-motion-360',
+        image: '/img/wedding2.jpg',
+        title: '360 Spin Platform',
+        description: '360-degree slow motion video captures with customized graphic layouts.'
+    },
+    {
+        id: 222,
+        category: 'vr-motion-360',
+        image: '/rk-photos/Gallery/Weddings/IMG/Wedding2.jpeg',
+        title: '360 Photo Booth Setup',
+        description: 'Popular 360-degree capture setups for wedding events.'
+    },
+    // Stalls Section
+    {
+        id: 231,
+        category: 'stalls',
+        image: '/rk-photos/Gallery/Stalls/Octanum.jpeg',
+        title: 'Octanum Stall Setup',
+        description: 'Specialized octagonal activity stalls setup.',
+        images: [
+            '/rk-photos/Gallery/Stalls/Octanum.jpeg',
+            '/rk-photos/Gallery/Stalls/Octanum1.jpeg',
+            '/rk-photos/Gallery/Stalls/Octanum2.jpeg',
+            '/rk-photos/Gallery/Stalls/Octanum3.jpeg'
+        ],
+        isGrouped: true
+    },
+    {
+        id: 232,
+        category: 'stalls',
+        image: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_events_stall.jpg',
+        title: 'Corporate Activity Stalls',
+        description: 'Custom activity and game stalls setup.'
+    },
+    // New Wedding Videos
+    {
+        id: 251,
+        category: 'wedding',
+        video: '/rk-photos/Gallery/Weddings/VID/wed.mp4',
+        isVideo: true,
+        image: '/rk-photos/Gallery/Weddings/IMG/Wedding2.jpeg',
+        title: 'Wedding Reception Highlights',
+        description: 'Beautiful highlight reel of the wedding dance and reception festivities.'
+    },
+    {
+        id: 252,
+        category: 'wedding',
+        video: '/rk-photos/Gallery/Weddings/VID/wed1.mp4',
+        isVideo: true,
+        image: '/rk-photos/Gallery/Weddings/IMG/Wedding.jpeg',
+        title: 'Traditional Wedding Rituals',
+        description: 'Highlights of traditional wedding rituals and entry celebrations.'
+    },
+    {
+        id: 253,
+        category: 'wedding',
+        video: '/rk-photos/Gallery/Weddings/VID/wed2.mp4',
+        isVideo: true,
+        image: '/rk-photos/Gallery/Weddings/IMG/wedding1.jpeg',
+        title: 'Wedding Sangeet Celebration',
+        description: 'Energetic sangeet dance performances and stage highlights.'
+    },
+    {
+        id: 254,
+        category: 'wedding',
+        video: '/rk-photos/Gallery/Weddings/VID/wed3.mp4',
+        isVideo: true,
+        image: '/rk-photos/Gallery/Weddings/IMG/WeddingDance.jpeg',
+        title: 'Groom & Bride Entry',
+        description: 'The grand and spectacular entry of the groom and bride.'
     }
 ];

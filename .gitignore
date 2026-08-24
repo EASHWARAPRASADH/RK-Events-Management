@@ -35,3 +35,4 @@ dist-ssr
 .agent
 brain
 dist.zip
+*.zip

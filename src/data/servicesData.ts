@@ -43,17 +43,17 @@ export const eventTypes = [
     },
     {
         icon: Trophy,
-        name: 'Mini Games',
-        description: 'Fun and engaging mini games for all ages and events',
+        name: 'Interactive Games',
+        description: 'Fun and engaging interactive games for all ages and events',
         features: ['Game Organization', 'Equipment Setup', 'Prize Distribution', 'Game Coordination', 'Entertainment Activities', 'Interactive Fun'],
         mediaId: 'service-sports',
-        image: '/img/games.jpg'
+        image: '/img/interactive.jpg'
     },
     {
         icon: Palette,
-        name: 'Cultural Events',
-        description: 'Traditional and cultural celebrations with authentic themes and performances',
-        features: ['Cultural Performances', 'Traditional Decorations', 'Folk Music & Dance', 'Cultural Shows', 'Festival Celebrations', 'Heritage Events'],
+        name: 'College Culturals and School Annual Day',
+        description: 'Traditional and cultural celebrations with authentic themes, college fests, and school annual programs',
+        features: ['College Cultural Festivals', 'School Annual Day Events', 'Traditional Performances', 'Stage Setup & Lighting', 'Celebrity/Artist Management', 'Talent Showcases'],
         mediaId: 'service-cultural',
         image: '/img/cultural-event.jpg'
     },
@@ -122,6 +122,29 @@ export const eventServices = [
         description: 'Television and display screen rental services',
         features: ['Smart TV Rentals', 'Large Screen Displays', 'Projection Systems', 'Digital Signage', 'Installation Support'],
         image: '/img/tvrental.jpg'
+    },
+
+    // VR & Gaming Services
+    {
+        icon: Gamepad2,
+        name: 'VR Games',
+        description: 'Virtual Reality setups with modern headsets and immersive experiences',
+        features: ['VR Headsets (Meta Quest 2/3)', '3D Immersive Action Games', 'Virtual Sports & Simulators', 'Safe Play-zone Arena', 'Dedicated Gaming Coordinators'],
+        image: '/img/interactive.jpg'
+    },
+    {
+        icon: Tv,
+        name: 'Motion Games',
+        description: 'Active, motion-sensor gaming setup utilizing cameras and controllers',
+        features: ['Xbox Kinect / Nintendo Switch fests', 'Active Dancing & Sports Challenges', 'Dual-Player Competitions', 'Large LED Screen Sync', 'Engaging Host & Setup'],
+        image: '/img/interactive.jpg'
+    },
+    {
+        icon: Camera,
+        name: '360° Photo Booth (With Software)',
+        description: '360-degree slow-motion spinning capture platform with custom overlay software',
+        features: ['360 Slow-Motion Spin Platform', 'Instant QR/SMS Video Downloads', 'Custom Logo & Software Overlays', 'Studio LED Ring Lights', 'Fun Props & Booth Directors'],
+        image: '/img/wedding2.jpg'
     },
 
     // Entertainment & Activities
@@ -197,7 +220,7 @@ export const serviceGalleryImages: Record<string, Array<{ id: number; url: strin
     'Building Lights': [
         { id: 1, url: '/img/decoration1.jpg', title: 'Building Illumination', description: 'Professional building facade lighting' },
         { id: 2, url: '/img/loghts.jpg', title: 'Architectural Lighting', description: 'Architectural lighting design and installation' },
-        { id: 3, url: '/RK photos/Gallery/Stage_Decoration/IMG/Decoration50.jpg', title: 'Outdoor Lighting', description: 'Beautiful outdoor and landscape lighting' },
+        { id: 3, url: '/rk-photos/Gallery/Stage_Decoration/IMG/Decoration50.jpg', title: 'Outdoor Lighting', description: 'Beautiful outdoor and landscape lighting' },
         { id: 4, url: '/img/wedding2.jpg', title: 'Wedding Venue Lighting', description: 'Elegant venue lighting for weddings' },
         { id: 5, url: '/img/cultural-event.jpg', title: 'Festive Building Lights', description: 'Festive building decorations and lighting' },
         { id: 6, url: '/img/LED Wall & Standees.jpg', title: 'Event Venue Lighting', description: 'Complete event venue lighting solutions' }
@@ -217,24 +240,39 @@ export const serviceGalleryImages: Record<string, Array<{ id: number; url: strin
         { id: 4, url: '/img/LED Wall & Standees.jpg', title: 'Stage Displays', description: 'Stage-mounted TV and display systems' },
         { id: 5, url: '/img/audiovideo.jpg', title: 'AV Display Setup', description: 'Complete AV and display system setup' }
     ],
+    'VR Games': [
+        { id: 1, url: '/img/interactive.jpg', title: 'Virtual Reality Headsets', description: 'Meta Quest virtual reality experiences' },
+        { id: 2, url: '/rk-photos/Gallery/VR_Games/vr.jpeg', title: 'VR Simulation', description: 'Virtual reality sports and simulation setups' },
+        { id: 3, url: '/img/stall.jpg', title: 'VR Play Arena', description: 'Safe VR gaming zones' }
+    ],
+    'Motion Games': [
+        { id: 1, url: '/img/interactive.jpg', title: 'Nintendo Switch Play', description: 'Nintendo Switch active multiplayer motion games' },
+        { id: 2, url: '/img/interactive.jpg', title: 'Xbox Kinect Dancing', description: 'Dance competition with Xbox Kinect' },
+        { id: 3, url: '/img/stall.jpg', title: 'Sensor Gaming Setup', description: 'Motion sensor setups for kids and adults fests' }
+    ],
+    '360° Photo Booth (With Software)': [
+        { id: 1, url: '/img/wedding2.jpg', title: '360 Spin Booth', description: 'Rotating slow-motion photo booth capturing group fun' },
+        { id: 2, url: '/img/Wedding.jpeg', title: 'Wedding 360 Booth', description: 'Popular 360-degree capture setups for wedding events' },
+        { id: 3, url: '/img/conference.jpg', title: 'Corporate Branding Booth', description: '360 photo booth with customized software brand overlay' }
+    ],
     'Interactive Games': [
         { id: 1, url: '/img/interactive.jpg', title: 'Interactive Gaming', description: 'Fun interactive games for all ages' },
-        { id: 2, url: '/img/games.jpg', title: 'Game Activities', description: 'Various gaming activities and competitions' },
+        { id: 2, url: '/img/interactive.jpg', title: 'Game Activities', description: 'Various gaming activities and competitions' },
         { id: 3, url: '/img/stall.jpg', title: 'Game Stalls', description: 'Professional game stall setups' },
-        { id: 4, url: '/RK photos/Gallery/Mini_Games/IMG/Minigames4.jpeg', title: 'Fun Activities', description: 'Entertaining games and fun activities' },
-        { id: 5, url: '/RK photos/Gallery/Mini_Games/IMG/Minigames5.jpeg', title: 'Active Games', description: 'Physical and active gaming activities' }
+        { id: 4, url: '/rk-photos/Gallery/Mini_Games/IMG/Minigames4.jpeg', title: 'Fun Activities', description: 'Entertaining games and fun activities' },
+        { id: 5, url: '/rk-photos/Gallery/Mini_Games/IMG/Minigames5.jpeg', title: 'Active Games', description: 'Physical and active gaming activities' }
     ],
 
     'Octanum Stalls': [
         { id: 1, url: '/img/stall.jpg', title: 'Octanum Stalls', description: 'Specialized octagonal gaming stalls' },
-        { id: 2, url: '/RK photos/Gallery/Stage_Decoration/IMG/Decorations123.jpg', title: 'Multiple Stalls', description: 'Various octanum stall configurations' },
+        { id: 2, url: '/rk-photos/Gallery/Stage_Decoration/IMG/Decorations123.jpg', title: 'Multiple Stalls', description: 'Various octanum stall configurations' },
         { id: 3, url: '/img/decoration1.jpg', title: 'Decorated Stalls', description: 'Beautifully decorated octanum stalls' },
-        { id: 4, url: '/img/games.jpg', title: 'Stall Games', description: 'Games and activities in octanum stalls' },
+        { id: 4, url: '/rk-photos/Gallery/Stalls/Octanum.jpeg', title: 'Stall Games', description: 'Games and activities in octanum stalls' },
         { id: 5, url: '/img/interactive.jpg', title: 'Interactive Stalls', description: 'Interactive activities in octanum stalls' }
     ],
     'Tattoo Painting & Mehandi Arts': [
         { id: 1, url: '/img/mehandi12.jpg', title: 'Mehandi Art', description: 'Beautiful traditional mehandi designs' },
-        { id: 2, url: '/RK photos/Gallery/Culturals/IMG/cultural-event.jpg', title: 'Traditional Art', description: 'Traditional body art and painting' },
+        { id: 2, url: '/rk-photos/Gallery/Culturals/IMG/cultural-event.jpg', title: 'Traditional Art', description: 'Traditional body art and painting' },
         { id: 3, url: '/img/stall.jpg', title: 'Nail Art Stalls', description: 'Professional nail art and beauty stalls' },
         { id: 4, url: '/img/Wedding.jpeg', title: 'Bridal Mehandi', description: 'Special bridal mehandi and henna services' },
         { id: 5, url: '/img/cultural-event.jpg', title: 'Family Traditions', description: 'Traditional art for family celebrations' }
@@ -243,7 +281,7 @@ export const serviceGalleryImages: Record<string, Array<{ id: number; url: strin
         { id: 1, url: '/img/stags.jpg', title: 'Stage Construction', description: 'Professional stage construction and setup' },
         { id: 2, url: '/img/LED Wall & Standees.jpg', title: 'Stage Design', description: 'Creative stage design and decoration' },
         { id: 3, url: '/img/decoration1.jpg', title: 'Backdrop Creation', description: 'Custom backdrop design and creation' },
-        { id: 4, url: '/RK photos/Gallery/Stage_Decoration/IMG/Stage.jpeg', title: 'Decorative Backdrops', description: 'Beautiful floral and decorative backdrops' },
+        { id: 4, url: '/rk-photos/Gallery/Stage_Decoration/IMG/Stage.jpeg', title: 'Decorative Backdrops', description: 'Beautiful floral and decorative backdrops' },
         { id: 5, url: '/img/Wedding.jpeg', title: 'Wedding Stage', description: 'Elegant wedding stage and backdrop setup' },
         { id: 6, url: '/img/conference.jpg', title: 'Corporate Stage', description: 'Professional corporate stage setup' }
     ],

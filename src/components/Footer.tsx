@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <div className="p-2 rounded-lg bg-white">
-                <img src="/svg/logo1logo-removebg-preview-DqMLdMPO.png" alt="RK Events and Management Logo" className="h-12 w-12 object-contain" />
+                <img src="/svg/logo.png" alt="RK Events and Management Logo" className="h-12 w-12 object-contain" />
               </div>
               <div>
                 <h3 className="font-serif text-2xl font-bold">RK Events and Managements</h3>
@@ -19,7 +19,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              With over 15 years of experience, we deliver creative, elegant, and flawless events that turn your moments into celebrations.
+              With over 16 years of experience, we deliver creative, elegant, and flawless events that turn your moments into celebrations.
             </p>
             <div className="flex space-x-4">
               <a
@@ -62,8 +62,8 @@ const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <p>Corporate Events</p>
               <p>Family Celebrations</p>
-              <p>School Events</p>
-              <p>Anniversary Parties</p>
+              <p>College Culturals and School Annual Day</p>
+              <p>Interactive Games</p>
               <p>DJ & Entertainment</p>
               <p>Catering Services</p>
             </div>

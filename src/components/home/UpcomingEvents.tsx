@@ -5,20 +5,20 @@ const UpcomingEvents = () => {
   const upcomingEvents = [
     {
       id: 'fallback-1',
-      title: 'Golden Anniversary Celebration',
-      type: 'Anniversary',
+      title: 'Luxury Wedding Reception',
+      type: 'Wedding',
       date: '2024-12-15',
       time: '18:00',
       venue: 'Grand Palace Hall',
       address: 'Anna Nagar, Chennai - 600040',
       guests: '200+',
-      description: 'A beautiful golden anniversary celebration for Mr. & Mrs. Sharma celebrating 50 years of togetherness.',
+      description: 'A grand and elegant traditional wedding setup and reception celebration.',
       imageUrl: '/img/Wedding.jpeg'
     },
     {
       id: 'fallback-2',
-      title: 'Annual Day',
-      type: 'Corporate',
+      title: 'College Cultural Fest',
+      type: 'Culturals',
       date: '2024-12-22',
       time: '19:00',
       venue: 'Luxury Resort',

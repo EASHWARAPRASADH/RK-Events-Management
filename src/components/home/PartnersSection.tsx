@@ -107,7 +107,7 @@ const PartnersSection = () => {
                 <div className="text-sm text-maroon-100">Collaborations</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gold-400 mb-2">15+</div>
+                <div className="text-3xl font-bold text-gold-400 mb-2">16+</div>
                 <div className="text-sm text-maroon-100">Years Experience</div>
               </div>
             </div>

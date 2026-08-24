@@ -82,7 +82,7 @@ const Partners = () => {
               <div className="text-maroon-100">Events</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-gold-400 mb-2">15+</div>
+              <div className="text-3xl font-bold text-gold-400 mb-2">16+</div>
               <div className="text-maroon-100">Years</div>
             </div>
             <div>

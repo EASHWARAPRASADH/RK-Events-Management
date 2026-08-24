@@ -29,7 +29,7 @@ const HeroSection = () => {
             className="inline-flex items-center bg-gold-500/20 text-gold-200 px-3 py-1 sm:px-4 sm:py-2 rounded-full mb-6 sm:mb-8 backdrop-blur-sm border border-gold-400/30"
           >
             <Star className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 fill-current" />
-            <span className="text-xs sm:text-sm font-medium">15+ Years of Excellence</span>
+            <span className="text-xs sm:text-sm font-medium">16+ Years of Excellence</span>
           </motion.div>
 
           {/* Main Headline */}
@@ -92,7 +92,7 @@ const HeroSection = () => {
               <div className="text-gray-300 text-xs sm:text-sm">Happy Guests</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gold-400 mb-1 sm:mb-2">15+</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gold-400 mb-1 sm:mb-2">16+</div>
               <div className="text-gray-300 text-xs sm:text-sm">Years Experience</div>
             </div>
           </motion.div>

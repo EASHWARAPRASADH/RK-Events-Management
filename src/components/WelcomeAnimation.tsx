@@ -81,7 +81,7 @@ const WelcomeAnimation: React.FC<WelcomeAnimationProps> = ({ onComplete }) => {
         }`}>
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-gold-400/30 px-6 py-3 rounded-full">
             <div className="w-2 h-2 bg-gold-400 rounded-full mr-3 animate-pulse"></div>
-            <span className="text-gold-200 font-medium">15+ Years of Excellence</span>
+            <span className="text-gold-200 font-medium">16+ Years of Excellence</span>
           </div>
         </div>
 

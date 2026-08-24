@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -27,10 +27,28 @@ import {
   Users,
   Rocket,
   Smile,
-  BookOpen
+  BookOpen,
+  Gamepad2,
+  Eye
 } from 'lucide-react';
+import EventGalleryModal from '../EventGalleryModal';
+import { eventTypes as dataEventTypes } from '../../data/servicesData';
+
+const MotionLink = motion(Link);
 
 const ServicesSnapshot = () => {
+  const [selectedEvent, setSelectedEvent] = useState<any>(null);
+
+  const getModalEventName = (name: string) => {
+    const mapping: { [key: string]: string } = {
+      'Wedding': 'Wedding Events',
+      'Birthday': 'Birthday Parties',
+      'Corporate Event': 'Corporate Events',
+      'Stall Decoration': 'Decorations'
+    };
+    return mapping[name] || name;
+  };
+
   // Event Types: Only unique, high-level types, now with imageUrl
   const eventTypes = [
     {
@@ -49,29 +67,29 @@ const ServicesSnapshot = () => {
     },
     {
       id: '3',
-      name: 'Annual Day',
-      description: 'Celebrating a milestone',
+      name: 'College Culturals and School Annual Day',
+      description: 'College fests, cultural nights, and school annual celebrations',
       icon: 'GraduationCap',
       imageUrl: '/img/conference.jpg',
     },
     {
       id: '4',
-      name: 'Anniversary',
-      description: 'Celebrating a special bond',
-      icon: 'Gift',
-      imageUrl: '/img/wedding2.jpg',
+      name: 'Interactive Games',
+      description: 'Fun, active motion games and immersive activities for guests',
+      icon: 'Gamepad2',
+      imageUrl: '/img/interactive.jpg',
     },
     {
       id: '5',
       name: 'Stall Decoration',
-      description: 'Professional gatherings for business',
+      description: 'Professional octagonal activity gaming stalls and event setups',
       icon: 'Tent',
       imageUrl: '/img/stall.jpg',
     },
     {
       id: '6',
       name: 'Corporate Event',
-      description: 'Professional gatherings for business',
+      description: 'Professional gatherings, conferences, and milestone business galas',
       icon: 'Briefcase',
       imageUrl: '/img/conference.jpg',
     },
@@ -105,10 +123,10 @@ const ServicesSnapshot = () => {
     },
     {
       id: '11',
-      name: 'Sports Event',
-      description: 'Exciting competitions and athletic gatherings',
-      icon: 'Trophy',
-      imageUrl: '/img/games.jpg',
+      name: 'Interactive Games',
+      description: 'Fun and engaging interactive games for all ages',
+      icon: 'Gamepad2',
+      imageUrl: '/img/interactive.jpg',
     },
     {
       id: '12',
@@ -250,11 +268,12 @@ const ServicesSnapshot = () => {
     Users,
     Rocket,
     Smile,
-    BookOpen
+    BookOpen,
+    Gamepad2
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -289,7 +308,7 @@ const ServicesSnapshot = () => {
               <Sparkles className="h-6 w-6 mr-3 text-gold-500" />
               Event Types We Handle
             </h3>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {eventTypes.slice(0, 6).map((event, index) => { // Displaying first 6 for snapshot
                 const IconComponent = iconMap[event.icon as keyof typeof iconMap] || Building2;
                 return (
@@ -299,9 +318,23 @@ const ServicesSnapshot = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="group flex flex-col bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+                    onClick={() => {
+                      const modalName = getModalEventName(event.name);
+                      const dataEvent = dataEventTypes.find(e => e.name === modalName) || {
+                        name: modalName,
+                        description: event.description,
+                        features: []
+                      };
+                      setSelectedEvent({
+                        name: modalName,
+                        description: event.description,
+                        icon: IconComponent,
+                        features: dataEvent.features || []
+                      });
+                    }}
+                    className="group flex flex-col bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden cursor-pointer"
                   >
-                    <div className="h-32 overflow-hidden relative">
+                    <div className="h-40 sm:h-32 overflow-hidden relative">
                       {event.imageUrl && (
                         <img src={event.imageUrl} alt={event.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                       )}
@@ -310,7 +343,7 @@ const ServicesSnapshot = () => {
                       </div>
                     </div>
                     <div className="p-4 flex-grow flex flex-col">
-                      <h4 className="font-semibold text-maroon-900 text-lg mb-1">{event.name}</h4>
+                      <h4 className="font-semibold text-maroon-900 text-base sm:text-lg mb-1">{event.name}</h4>
                       <p className="text-gray-600 text-xs line-clamp-2">{event.description}</p>
                     </div>
                   </motion.div>
@@ -318,8 +351,8 @@ const ServicesSnapshot = () => {
               })}
             </div>
             <div className="mt-8 text-center">
-              <Link to="/services" className="text-maroon-600 font-semibold hover:text-maroon-800 inline-flex items-center text-sm">
-                View all event types <ArrowRight className="ml-1 h-4 w-4" />
+              <Link to="/services" className="inline-flex items-center bg-maroon-800 hover:bg-maroon-900 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5 text-sm">
+                View all event types <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
           </motion.div>
@@ -339,13 +372,14 @@ const ServicesSnapshot = () => {
               {eventServices.slice(0, 4).map((service, index) => { // Displaying first 4 for snapshot
                 const IconComponent = iconMap[service.icon as keyof typeof iconMap] || Music;
                 return (
-                  <motion.div
+                  <MotionLink
+                    to="/services"
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-row h-32"
+                    className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-row h-32 cursor-pointer"
                   >
                     <div className="w-1/3 relative overflow-hidden">
                       {service.imageUrl && (
@@ -361,13 +395,13 @@ const ServicesSnapshot = () => {
                       <p className="text-gray-600 text-xs mb-2 line-clamp-2">{service.description}</p>
                       <span className="text-xs text-gold-600 font-medium">{service.pricing}</span>
                     </div>
-                  </motion.div>
+                  </MotionLink>
                 );
               })}
             </div>
             <div className="mt-8 text-center">
-              <Link to="/services" className="text-maroon-600 font-semibold hover:text-maroon-800 inline-flex items-center text-sm">
-                Explore all services <ArrowRight className="ml-1 h-4 w-4" />
+              <Link to="/services" className="inline-flex items-center bg-maroon-800 hover:bg-maroon-900 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5 text-sm">
+                Explore all services <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
           </motion.div>
@@ -407,6 +441,13 @@ const ServicesSnapshot = () => {
           </div>
         </motion.div>
       </div>
+      {selectedEvent && (
+        <EventGalleryModal
+          isOpen={!!selectedEvent}
+          onClose={() => setSelectedEvent(null)}
+          eventType={selectedEvent}
+        />
+      )}
     </section >
   );
 };

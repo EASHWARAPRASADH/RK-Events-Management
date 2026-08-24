@@ -36,7 +36,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition-opacity">
             <div className="p-1.5 sm:p-2 rounded-lg bg-white">
-              <img src="/svg/logo1logo-removebg-preview-DqMLdMPO.png" alt="RK Events and Management Logo" className="h-8 w-8 sm:h-12 sm:w-12 object-contain" />
+              <img src="/svg/logo.png" alt="RK Events and Management Logo" className="h-8 w-8 sm:h-12 sm:w-12 object-contain" />
             </div>
             <div className="min-w-0 flex-1">
               <h1 className="font-serif text-base sm:text-2xl font-bold text-maroon-800 truncate">RK Events and Management</h1>

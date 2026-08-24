@@ -18,7 +18,7 @@ const Gallery = () => {
 
     if (filterParam) {
       // Validate that the filter exists in our filters array
-      const validFilters = ['all', 'corporate', 'wedding', 'birthday', 'sports', 'cultural', 'decorations'];
+      const validFilters = ['all', 'corporate', 'wedding', 'birthday', 'sports', 'vr-motion-360', 'stalls', 'cultural', 'decorations'];
       if (validFilters.includes(filterParam)) {
         setActiveFilter(filterParam);
         setVisibleItems(12);
@@ -38,7 +38,9 @@ const Gallery = () => {
     { id: 'wedding', name: 'Weddings' },
     { id: 'birthday', name: 'Birthdays' },
     { id: 'sports', name: 'Interactive Games' },
-    { id: 'cultural', name: 'Cultural' },
+    { id: 'vr-motion-360', name: 'VR, Motion & 360°' },
+    { id: 'stalls', name: 'Stalls' },
+    { id: 'cultural', name: 'College Culturals and School Annual Day' },
     { id: 'decorations', name: 'Decorations' }
   ];
 
@@ -61,8 +63,12 @@ const Gallery = () => {
       return matches;
     });
 
-  // Sort items to ensure consistent ordering
-  allFilteredItems.sort((a, b) => a.id - b.id);
+  // Sort items: Videos first, then by ID
+  allFilteredItems.sort((a, b) => {
+    if (a.isVideo && !b.isVideo) return -1;
+    if (!a.isVideo && b.isVideo) return 1;
+    return a.id - b.id;
+  });
 
   const filteredItems = allFilteredItems.slice(0, visibleItems);
 
@@ -115,18 +121,18 @@ const Gallery = () => {
       {/* Filter Section */}
       <section className="py-6 sm:py-8 bg-white border-b border-gray-200 sm:sticky sm:top-20 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0">
-            <div className="flex items-center space-x-2 sm:mr-6">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 w-full">
+            <div className="flex items-center space-x-2 md:mr-6 flex-shrink-0">
               <Filter className="h-5 w-5 text-gray-600" />
               <span className="text-gray-600 font-medium whitespace-nowrap">Filter by:</span>
             </div>
-            <div className="flex gap-1 justify-start sm:justify-center overflow-x-auto sm:overflow-visible w-full sm:w-auto px-2 sm:px-0">
+            <div className="flex gap-2 overflow-x-auto w-full px-2 py-2 justify-start md:justify-start">
               {filters.map((filter) => (
                 <button
                   key={filter.id}
                   onClick={() => handleFilterChange(filter.id)}
-                  className={`${filter.name === 'Photography and Videos' ? 'px-20 sm:px-14' : 'px-16 sm:px-10'} py-3 sm:py-2 rounded-full text-xs font-medium transition-all duration-300 whitespace-nowrap text-center flex items-center justify-center ${activeFilter === filter.id
-                    ? 'bg-maroon-600 text-white shadow-lg'
+                  className={`px-5 py-2.5 rounded-full text-xs font-semibold transition-all duration-300 whitespace-nowrap text-center flex-shrink-0 ${activeFilter === filter.id
+                    ? 'bg-maroon-600 text-white shadow-md'
                     : 'bg-gray-100 text-gray-600 hover:bg-maroon-100 hover:text-maroon-600'
                     }`}
                 >
@@ -172,7 +178,7 @@ const Gallery = () => {
                     {item.isVideo ? (
                       // Video Player
                       <video
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-contain bg-black"
                         controls
                         muted
                         preload="metadata"
