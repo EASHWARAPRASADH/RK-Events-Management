@@ -83,9 +83,11 @@ const EventGalleryModal: React.FC<EventGalleryModalProps> = ({ isOpen, onClose, 
       case 'College Culturals and School Annual Day':
       case 'Culturals':
         return [
-          { id: 1, url: '/rk-photos/Gallery/Culturals/IMG/School.jpeg', title: 'School Cultural Program', event_name: 'School Event', description: 'School cultural events and educational programs' },
-          { id: 2, url: '/rk-photos/Gallery/Culturals/IMG/SchoolAnual Day.jpeg', title: 'School Annual Day', event_name: 'Annual Celebration', description: 'Grand school annual day with cultural programs' },
-          { id: 3, url: '/rk-photos/Gallery/Culturals/IMG/SchoolAnualday1.jpeg', title: 'School Annual Celebration', event_name: 'Cultural Festival', description: 'School annual day celebrations with cultural performances' }
+          { id: 1, url: '/rk-photos/Gallery/Culturals/IMG/college_freshers_day_stage_svct.jpg', title: 'College Day & Culturals Stage', event_name: 'College Culturals', description: 'Grand college auditorium stage setup with LED backdrop, audio system, and floral decor' },
+          { id: 2, url: '/rk-photos/Gallery/Culturals/IMG/college_freshers_day_banner_svct.jpg', title: "Fresher's Day Celebration", event_name: "College Fresher's Day", description: "Fresher's Day event management with keynote speakers and stage arrangement" },
+          { id: 3, url: '/rk-photos/Gallery/Culturals/IMG/School.jpeg', title: 'School Cultural Program', event_name: 'School Event', description: 'School cultural events and educational programs' },
+          { id: 4, url: '/rk-photos/Gallery/Culturals/IMG/SchoolAnual Day.jpeg', title: 'School Annual Day', event_name: 'Annual Celebration', description: 'Grand school annual day with cultural programs' },
+          { id: 5, url: '/rk-photos/Gallery/Culturals/IMG/SchoolAnualday1.jpeg', title: 'School Annual Celebration', event_name: 'Cultural Festival', description: 'School annual day celebrations with cultural performances' }
         ];
       case 'Services':
       case 'Photography and Video':

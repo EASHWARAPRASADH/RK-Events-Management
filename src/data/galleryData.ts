@@ -781,6 +781,20 @@ export const galleryItems: GalleryItem[] = [
 
     // Cultural Section - Multiple images
     {
+        id: 272,
+        category: 'cultural',
+        image: '/rk-photos/Gallery/Culturals/IMG/college_freshers_day_stage_svct.jpg',
+        title: 'College Day & Culturals Stage',
+        description: 'Grand college auditorium stage setup with LED backdrop, audio monitors, and floral decor at SVCT'
+    },
+    {
+        id: 273,
+        category: 'cultural',
+        image: '/rk-photos/Gallery/Culturals/IMG/college_freshers_day_banner_svct.jpg',
+        title: "Fresher's Day Celebration & Keynote",
+        description: "Fresher's Day 2026 event management with prominent keynote speakers and dignitary stage at SVCT"
+    },
+    {
         id: 57,
         category: 'wedding',
         image: '/rk-photos/Gallery/Culturals/IMG/Anniversary.jpg',
