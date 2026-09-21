@@ -185,6 +185,69 @@ export const galleryItems: GalleryItem[] = [
         title: 'Corporate Event Stall',
         description: 'Corporate exhibition stall design and setup'
     },
+    {
+        id: 261,
+        category: 'corporate',
+        image: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_mou_exchange_stage.jpg',
+        title: 'MoU Exchange Stage Setup',
+        description: 'Grand corporate stage and VIP seating setup for ICT Academy MoU Exchange'
+    },
+    {
+        id: 262,
+        category: 'corporate',
+        image: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_mou_exchange_panel.jpg',
+        title: 'Executive Panel Discussion',
+        description: 'Dignitaries and keynote speakers on stage during corporate MoU exchange ceremony'
+    },
+    {
+        id: 263,
+        category: 'corporate',
+        image: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_digital_standee.jpg',
+        title: 'Digital LED Standee Display',
+        description: 'Modern vertical LED kiosk display for corporate event branding and schedule'
+    },
+    {
+        id: 264,
+        category: 'corporate',
+        image: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_bridge26_photobooth_setup.jpg',
+        title: "Bridge'26 Photo Booth & Sponsor Wall",
+        description: 'Illuminated 3D brand logo table with custom sponsor media wall'
+    },
+    {
+        id: 265,
+        category: 'corporate',
+        image: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_bridge26_photobooth_team.jpg',
+        title: 'Interactive Corporate Photo Booth',
+        description: "Attendees engaging with interactive hashtag props at ICT Academy Bridge'26"
+    },
+    {
+        id: 266,
+        category: 'corporate',
+        image: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_bridge26_venue_ambiance.jpg',
+        title: 'Conference Foyer & Ambiance',
+        description: 'Grand venue entrance with luxury chandelier and branded event installation'
+    },
+    {
+        id: 267,
+        category: 'corporate',
+        image: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_bridge26_conference_hall.jpg',
+        title: 'Annual Conference Hall',
+        description: 'Full conference hall management with truss lighting, AV setup, and theater seating'
+    },
+    {
+        id: 268,
+        category: 'corporate',
+        image: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_bridge26_main_stage.jpg',
+        title: 'Main Conference Stage & LED Wall',
+        description: 'Ultra-wide LED stage backdrop, line-array audio, and sponsor branding displays'
+    },
+    {
+        id: 269,
+        category: 'corporate',
+        image: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_building_illumination.jpg',
+        title: 'Corporate Facade Illumination',
+        description: 'Themed tricolor LED facade lighting and decorative illumination for corporate towers'
+    },
     // Corporate Videos
     {
         id: 24,
@@ -212,6 +275,15 @@ export const galleryItems: GalleryItem[] = [
         description: 'Corporate celebration and ceremony video',
         isVideo: true,
         image: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_6.jpg' // Thumbnail
+    },
+    {
+        id: 270,
+        category: 'corporate',
+        video: '/rk-photos/Gallery/Corporate_Meetings/VID/corporate_bridge26_event_reel.mp4',
+        title: "Bridge'26 Event Highlights Reel",
+        description: "Highlight reel and event management showcase of ICT Academy Bridge'26 Puducherry",
+        isVideo: true,
+        image: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_bridge26_photobooth_team.jpg' // Thumbnail
     },
 
 
@@ -1016,5 +1088,14 @@ export const galleryItems: GalleryItem[] = [
         image: '/rk-photos/Gallery/Weddings/IMG/WeddingDance.jpeg',
         title: 'Groom & Bride Entry',
         description: 'The grand and spectacular entry of the groom and bride.'
+    },
+    {
+        id: 271,
+        category: 'wedding',
+        video: '/rk-photos/Gallery/Weddings/VID/wedding_reception_entry.mp4',
+        isVideo: true,
+        image: '/rk-photos/Gallery/Weddings/IMG/wedding_reception_entry_thumb.jpg',
+        title: 'Grand Wedding Reception Entry',
+        description: 'Spectacular aisle entry of the bride and groom with floral garlands, cold pyro, and cloud effects.'
     }
 ];

@@ -26,26 +26,31 @@ const EventGalleryModal: React.FC<EventGalleryModalProps> = ({ isOpen, onClose, 
       case 'Corporate Event':
       case 'Corporate':
         return [
-          { id: 1, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_2.jpg', title: 'Corporate Meeting Setup', event_name: 'Business Meeting', description: 'Professional meeting setup with modern AV equipment' },
-          { id: 2, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_3.jpg', title: 'Business Conference', event_name: 'Corporate Conference', description: 'Corporate conference with professional presentation setup' },
-          { id: 3, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_4.jpg', title: 'Corporate Event Management', event_name: 'Business Event', description: 'Complete corporate event management and coordination' },
-          { id: 4, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_5.jpg', title: 'Corporate Function', event_name: 'Sponsor Display', description: 'Professional sponsor board setup for corporate events' },
-          { id: 5, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_6.jpg', title: 'Corporate Branding Wall', event_name: 'Brand Display', description: 'Custom branding wall for corporate events and product launches' },
-          { id: 6, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_7.jpg', title: 'Corporate Networking Setup', event_name: 'Networking Event', description: 'Elegant networking area with branded elements for corporate gatherings' },
-          { id: 7, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_8.jpg', title: 'Corporate Branding Display', event_name: 'Brand Showcase', description: 'Modern corporate branding display with digital signage' },
-          { id: 8, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_9.jpg', title: 'Corporate Lighting Setup', event_name: 'Corporate Event', description: 'Professional audio-visual equipment setup' },
-          { id: 9, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_10.jpg', title: 'Corporate Event Design', event_name: 'Product Launch', description: 'Professional stage setup for corporate events' },
-          { id: 10, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_11.jpg', title: 'Corporate Venue', event_name: 'Business Meeting', description: 'Elegant venue setup for corporate gatherings' }
+          { id: 1, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_bridge26_main_stage.jpg', title: "Bridge'26 Main Conference Stage", event_name: 'Corporate Summit', description: 'Ultra-wide LED stage backdrop, audio line arrays, and sponsor branding' },
+          { id: 2, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_mou_exchange_stage.jpg', title: 'MoU Exchange Stage Setup', event_name: 'MoU Signing Ceremony', description: 'Grand corporate stage and VIP seating setup for ICT Academy MoU Exchange' },
+          { id: 3, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_bridge26_photobooth_setup.jpg', title: "Bridge'26 Photo Booth & 3D Logo", event_name: 'Photo Booth', description: 'Illuminated 3D brand logo table with custom sponsor media wall' },
+          { id: 4, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/corporate_bridge26_conference_hall.jpg', title: 'Conference Hall Management', event_name: 'Annual Conference', description: 'Complete conference hall setup with truss lighting and theater seating' },
+          { id: 5, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_2.jpg', title: 'Corporate Meeting Setup', event_name: 'Business Meeting', description: 'Professional meeting setup with modern AV equipment' },
+          { id: 6, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_3.jpg', title: 'Business Conference', event_name: 'Corporate Conference', description: 'Corporate conference with professional presentation setup' },
+          { id: 7, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_4.jpg', title: 'Corporate Event Management', event_name: 'Business Event', description: 'Complete corporate event management and coordination' },
+          { id: 8, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_5.jpg', title: 'Corporate Function', event_name: 'Sponsor Display', description: 'Professional sponsor board setup for corporate events' },
+          { id: 9, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_6.jpg', title: 'Corporate Branding Wall', event_name: 'Brand Display', description: 'Custom branding wall for corporate events and product launches' },
+          { id: 10, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_7.jpg', title: 'Corporate Networking Setup', event_name: 'Networking Event', description: 'Elegant networking area with branded elements for corporate gatherings' },
+          { id: 11, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_8.jpg', title: 'Corporate Branding Display', event_name: 'Brand Showcase', description: 'Modern corporate branding display with digital signage' },
+          { id: 12, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_9.jpg', title: 'Corporate Lighting Setup', event_name: 'Corporate Event', description: 'Professional audio-visual equipment setup' },
+          { id: 13, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_10.jpg', title: 'Corporate Event Design', event_name: 'Product Launch', description: 'Professional stage setup for corporate events' },
+          { id: 14, url: '/rk-photos/Gallery/Corporate_Meetings/IMG/meeting_11.jpg', title: 'Corporate Venue', event_name: 'Business Meeting', description: 'Elegant venue setup for corporate gatherings' }
         ];
       case 'Wedding Events':
       case 'Wedding':
       case 'Weddings':
         return [
-          { id: 1, url: '/rk-photos/Gallery/Weddings/IMG/Wedding.jpeg', title: 'Dream Wedding Ceremony', event_name: 'Wedding', description: 'Beautiful wedding setup with elegant decorations and lighting' },
-          { id: 2, url: '/rk-photos/Gallery/Weddings/IMG/wedding1.jpeg', title: 'Wedding Celebration', event_name: 'Wedding', description: 'Complete wedding ceremony with traditional arrangements' },
-          { id: 3, url: '/rk-photos/Gallery/Weddings/IMG/Wedding2.jpeg', title: 'Wedding Reception', event_name: 'Wedding Entertainment', description: 'Professional DJ services for wedding entertainment' },
-          { id: 4, url: '/rk-photos/Gallery/Weddings/IMG/Wedding Cart.jpeg', title: 'Wedding Cart Decoration', event_name: 'Wedding', description: 'Traditional wedding cart with beautiful decorations' },
-          { id: 5, url: '/rk-photos/Gallery/Culturals/IMG/Anniversary.jpg', title: 'Wedding Anniversary Stage', event_name: 'Wedding Anniversary', description: 'Elegant stage setup for wedding anniversary celebration' }
+          { id: 1, url: '/rk-photos/Gallery/Weddings/IMG/wedding_reception_entry_thumb.jpg', title: 'Grand Reception Entry', event_name: 'Wedding Reception', description: 'Spectacular aisle entry of the bride and groom with floral garlands and cloud effects' },
+          { id: 2, url: '/rk-photos/Gallery/Weddings/IMG/Wedding.jpeg', title: 'Dream Wedding Ceremony', event_name: 'Wedding', description: 'Beautiful wedding setup with elegant decorations and lighting' },
+          { id: 3, url: '/rk-photos/Gallery/Weddings/IMG/wedding1.jpeg', title: 'Wedding Celebration', event_name: 'Wedding', description: 'Complete wedding ceremony with traditional arrangements' },
+          { id: 4, url: '/rk-photos/Gallery/Weddings/IMG/Wedding2.jpeg', title: 'Wedding Reception', event_name: 'Wedding Entertainment', description: 'Professional DJ services for wedding entertainment' },
+          { id: 5, url: '/rk-photos/Gallery/Weddings/IMG/Wedding Cart.jpeg', title: 'Wedding Cart Decoration', event_name: 'Wedding', description: 'Traditional wedding cart with beautiful decorations' },
+          { id: 6, url: '/rk-photos/Gallery/Culturals/IMG/Anniversary.jpg', title: 'Wedding Anniversary Stage', event_name: 'Wedding Anniversary', description: 'Elegant stage setup for wedding anniversary celebration' }
         ];
       case 'Family Celebrations':
       case 'Baby Shower':
