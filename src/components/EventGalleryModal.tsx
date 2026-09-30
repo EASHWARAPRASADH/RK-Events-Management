@@ -114,8 +114,49 @@ const EventGalleryModal: React.FC<EventGalleryModalProps> = ({ isOpen, onClose, 
     }
   };
 
+  const getGalleryVideos = (eventName: string) => {
+    switch (eventName) {
+      case 'Interactive Games':
+      case 'VR, Motion & 360°':
+      case 'Stalls':
+        return [
+          {
+            id: 1,
+            url: '/rk-photos/Gallery/VR_Games/vr_motion_platform_video.mp4',
+            title: 'VR Motion Simulator Walk',
+            event_name: 'VR Experience',
+            description: 'VR plank and motion platform action experience with Meta Quest headset'
+          }
+        ];
+      case 'Corporate':
+      case 'Corporate Events':
+        return [
+          {
+            id: 1,
+            url: '/rk-photos/Gallery/Corporate_Meetings/VID/corporate_bridge26_event_reel.mp4',
+            title: "MoU Exchange & Bridge'26 Puducherry Highlights",
+            event_name: 'Corporate Summit',
+            description: 'Grand MoU exchange and industrial conference highlights'
+          }
+        ];
+      case 'Weddings':
+      case 'Wedding Events':
+        return [
+          {
+            id: 1,
+            url: '/rk-photos/Gallery/Weddings/VID/wedding_reception_entry.mp4',
+            title: 'Grand Wedding Reception Entry',
+            event_name: 'Wedding Reception',
+            description: 'Magical entry of bride and groom with cold pyros and lights'
+          }
+        ];
+      default:
+        return [];
+    }
+  };
+
   const galleryImages = getGalleryImages(eventType.name);
-  const galleryVideos: any[] = [];
+  const galleryVideos = getGalleryVideos(eventType.name);
 
   const currentMedia = activeTab === 'images' ? galleryImages : galleryVideos;
 
@@ -208,9 +249,28 @@ const EventGalleryModal: React.FC<EventGalleryModalProps> = ({ isOpen, onClose, 
           )}
 
           {activeTab === 'videos' && (
-            <div className="text-center py-12 text-gray-500 text-sm">
-              No video highlights available for this category yet.
-            </div>
+            galleryVideos.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {galleryVideos.map((video) => (
+                  <div key={video.id} className="relative rounded-2xl overflow-hidden bg-black shadow-md flex flex-col">
+                    <video
+                      src={video.url}
+                      controls
+                      playsInline
+                      className="w-full h-48 sm:h-56 object-contain bg-black"
+                    />
+                    <div className="p-3 bg-white flex-1">
+                      <p className="text-sm font-semibold text-gray-900">{video.title}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{video.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12 text-gray-500 text-sm">
+                No video highlights available for this category yet.
+              </div>
+            )
           )}
         </div>
 

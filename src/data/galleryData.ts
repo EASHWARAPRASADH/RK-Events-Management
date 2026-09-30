@@ -1018,6 +1018,9 @@ export const galleryItems: GalleryItem[] = [
             '/rk-photos/Gallery/VR_Games/vr4.jpeg',
             '/rk-photos/Gallery/VR_Games/vr_motion_platform.jpg'
         ],
+        videos: [
+            '/rk-photos/Gallery/VR_Games/vr_motion_platform_video.mp4'
+        ],
         isGrouped: true
     },
     {

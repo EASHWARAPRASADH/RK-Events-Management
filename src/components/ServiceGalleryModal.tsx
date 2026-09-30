@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { X, ChevronLeft, ChevronRight, Phone, MessageCircle } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Phone, MessageCircle, Image as ImageIcon, Video as VideoIcon, Play } from 'lucide-react';
 
 interface ServiceGalleryModalProps {
   isOpen: boolean;
@@ -20,6 +20,11 @@ interface ServiceGalleryModalProps {
 const ServiceGalleryModal = ({ isOpen, onClose, service }: ServiceGalleryModalProps) => {
   const [activeTab, setActiveTab] = useState<'images' | 'videos'>('images');
   const [selectedImage, setSelectedImage] = useState<number>(0);
+
+  useEffect(() => {
+    setActiveTab('images');
+    setSelectedImage(0);
+  }, [service]);
 
   if (!isOpen || !service) return null;
 
@@ -50,7 +55,12 @@ const ServiceGalleryModal = ({ isOpen, onClose, service }: ServiceGalleryModalPr
           description: svc.description
         }
       ],
-      videos: []
+      videos: (svc.videos || []).map((url: string, index: number) => ({
+        id: index + 1,
+        url,
+        title: `${svc.title} - Video ${index + 1}`,
+        description: svc.description
+      }))
     };
   };
 
@@ -96,6 +106,40 @@ const ServiceGalleryModal = ({ isOpen, onClose, service }: ServiceGalleryModalPr
           </button>
         </div>
 
+        {/* Media Switcher Tabs (if videos exist) */}
+        {media.videos.length > 0 && (
+          <div className="flex items-center space-x-2 px-4 sm:px-6 py-2 bg-gray-100 border-b border-gray-200 flex-none">
+            <button
+              onClick={() => {
+                setActiveTab('images');
+                setSelectedImage(0);
+              }}
+              className={`flex items-center space-x-2 px-4 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+                activeTab === 'images'
+                  ? 'bg-maroon-800 text-white shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900 hover:bg-white'
+              }`}
+            >
+              <ImageIcon className="h-3.5 w-3.5" />
+              <span>Photos ({media.images.length})</span>
+            </button>
+            <button
+              onClick={() => {
+                setActiveTab('videos');
+                setSelectedImage(0);
+              }}
+              className={`flex items-center space-x-2 px-4 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+                activeTab === 'videos'
+                  ? 'bg-maroon-800 text-white shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900 hover:bg-white'
+              }`}
+            >
+              <VideoIcon className="h-3.5 w-3.5" />
+              <span>Videos ({media.videos.length})</span>
+            </button>
+          </div>
+        )}
+
         {/* Content Container */}
         <div className="p-3 sm:p-5 overflow-y-auto bg-gray-50 flex flex-col space-y-4" style={{ flex: '1 1 0%', minHeight: 0 }}>
           {/* Main Media Preview */}
@@ -109,8 +153,11 @@ const ServiceGalleryModal = ({ isOpen, onClose, service }: ServiceGalleryModalPr
                 />
               ) : (
                 <video
+                  key={currentMedia[selectedImage]?.url}
                   src={currentMedia[selectedImage]?.url}
                   controls
+                  playsInline
+                  autoPlay
                   className="max-h-[45vh] w-full object-contain bg-black"
                 />
               )
@@ -150,7 +197,13 @@ const ServiceGalleryModal = ({ isOpen, onClose, service }: ServiceGalleryModalPr
                     selectedImage === index ? 'border-maroon-800 scale-105 shadow-md' : 'border-transparent opacity-60 hover:opacity-100'
                   }`}
                 >
-                  <img src={item.url} alt={item.title} className="w-full h-full object-cover" />
+                  {activeTab === 'images' ? (
+                    <img src={item.url} alt={item.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="w-full h-full bg-black flex items-center justify-center text-white">
+                      <Play className="h-5 w-5 text-white" />
+                    </div>
+                  )}
                 </button>
               ))}
             </div>
