@@ -521,6 +521,16 @@ export const galleryItems: GalleryItem[] = [
 
     // Interactive Games Section - Grouped by Game Type
     {
+        id: 276,
+        category: 'sports',
+        title: 'Electric Buzzer Challenge',
+        description: 'Test your steady hands and focus! Guide the loop through the wire without touching it—one mistake and the buzzer goes off!',
+        image: '/rk-photos/Gallery/Mini_Games/IMG/electric_buzzer_challenge_main.jpg',
+        images: ['/rk-photos/Gallery/Mini_Games/IMG/electric_buzzer_challenge_main.jpg'],
+        videos: [],
+        isGrouped: false
+    },
+    {
         id: 39,
         category: 'sports',
         title: 'Kids Bouncy Castle / Inflatable Slide',
@@ -1005,9 +1015,26 @@ export const galleryItems: GalleryItem[] = [
             '/rk-photos/Gallery/VR_Games/vr1.jpeg',
             '/rk-photos/Gallery/VR_Games/vr2.jpeg',
             '/rk-photos/Gallery/VR_Games/vr3.jpeg',
-            '/rk-photos/Gallery/VR_Games/vr4.jpeg'
+            '/rk-photos/Gallery/VR_Games/vr4.jpeg',
+            '/rk-photos/Gallery/VR_Games/vr_motion_platform.jpg'
         ],
         isGrouped: true
+    },
+    {
+        id: 274,
+        category: 'vr-motion-360',
+        image: '/rk-photos/Gallery/VR_Games/vr_motion_platform.jpg',
+        title: 'VR Motion Simulator Platform',
+        description: 'Suspension bridge walk and VR rollercoaster experience on interactive motion platform with Meta Quest headset'
+    },
+    {
+        id: 275,
+        category: 'vr-motion-360',
+        video: '/rk-photos/Gallery/VR_Games/vr_motion_platform_video.mp4',
+        title: 'VR Plank & Motion Walk Action',
+        description: 'Exciting live video of players testing balance and thrill on the VR motion simulator platform',
+        isVideo: true,
+        image: '/rk-photos/Gallery/VR_Games/vr_motion_platform.jpg'
     },
     {
         id: 202,

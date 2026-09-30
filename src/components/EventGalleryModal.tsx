@@ -76,9 +76,11 @@ const EventGalleryModal: React.FC<EventGalleryModalProps> = ({ isOpen, onClose, 
       case 'VR, Motion & 360°':
       case 'Stalls':
         return [
-          { id: 1, url: '/rk-photos/Gallery/Mini_Games/IMG/1.jpeg', title: 'Interactive Games Activities', event_name: 'Interactive Games', description: 'Fun interactive games setup' },
-          { id: 2, url: '/rk-photos/Gallery/Mini_Games/IMG/10.jpeg', title: 'Game Stall setup', event_name: 'Interactive Games', description: 'Interactive games and stall setup' },
-          { id: 3, url: '/rk-photos/Gallery/Mini_Games/IMG/12.jpeg', title: 'Carnival Games', event_name: 'Interactive Games', description: 'Exciting mini game activities' }
+          { id: 1, url: '/rk-photos/Gallery/Mini_Games/IMG/electric_buzzer_challenge_main.jpg', title: 'Electric Buzzer Challenge', event_name: 'Interactive Carnival Game', description: 'Steady hands and focus challenge game for parties and events' },
+          { id: 2, url: '/rk-photos/Gallery/VR_Games/vr_motion_platform.jpg', title: 'VR Motion Simulator Platform', event_name: 'VR Experience', description: 'Meta Quest VR headset with motion simulator walk platform' },
+          { id: 3, url: '/rk-photos/Gallery/Mini_Games/IMG/1.jpeg', title: 'Interactive Games Activities', event_name: 'Interactive Games', description: 'Fun interactive games setup' },
+          { id: 4, url: '/rk-photos/Gallery/Mini_Games/IMG/10.jpeg', title: 'Game Stall setup', event_name: 'Interactive Games', description: 'Interactive games and stall setup' },
+          { id: 5, url: '/rk-photos/Gallery/Mini_Games/IMG/12.jpeg', title: 'Carnival Games', event_name: 'Interactive Games', description: 'Exciting mini game activities' }
         ];
       case 'College Culturals and School Annual Day':
       case 'Culturals':
